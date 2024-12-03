@@ -1,0 +1,5 @@
+/*Grad*/
+\copy Restaurant(RestaurantId, Name, CityId, NumberOfTables, OpeningTime, ClosingTime) FROM 'C:/Users/KORISNIK/Downloads/CitySchema.csv' DELIMITER ',' CSV HEADER;
+
+/*Restoran*/
+\copy Restaurant(RestaurantId, Name, CityId, NumberOfTables, OpeningTime, ClosingTime) FROM 'C:/Users/KORISNIK/Downloads/RestaurantSchema.csv' DELIMITER ',' CSV HEADER;
