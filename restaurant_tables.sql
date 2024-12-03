@@ -21,6 +21,8 @@ CREATE TABLE Meal(
     Calories FLOAT CHECK (Calories > 0),
     Price FLOAT CHECK (Price > 0)
 );
+ALTER TABLE Meal
+	DROP COLUMN Description;
 
 CREATE TABLE Menu(
 	MenuId SERIAL PRIMARY KEY,
