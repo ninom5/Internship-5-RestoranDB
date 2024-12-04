@@ -12,6 +12,8 @@ CREATE TABLE Restaurant(
     OpeningTime TIME NOT NULL,
     ClosingTime TIME NOT NULL
 );
+ALTER TABLE Restaurant
+	ADD CONSTRAINT UniqueName UNIQUE (Name, CityId);
 
 CREATE TABLE Meal(
     MealId SERIAL PRIMARY KEY,
@@ -22,7 +24,8 @@ CREATE TABLE Meal(
     Price FLOAT CHECK (Price > 0)
 );
 ALTER TABLE Meal
-	DROP COLUMN Description;
+	DROP COLUMN Description,
+	ADD CONSTRAINT UniqueMealName UNIQUE (Name);
 
 CREATE TABLE Menu(
 	MenuId SERIAL PRIMARY KEY,
@@ -32,12 +35,17 @@ CREATE TABLE Menu(
     FOREIGN KEY (MealId) REFERENCES Meal(MealId),
     Availability BOOLEAN NOT NULL
 );
+ALTER TABLE Menu 
+	ADD CONSTRAINT UniqueRestaurantMeal UNIQUE (RestaurantId, MealId);
+
 
 CREATE TABLE Guest(
 	GuestId SERIAL PRIMARY KEY,
 	Name VARCHAR(30) NOT NULL,
 	Birth TIMESTAMP		
 );
+ALTER TABLE Guest 
+	ADD CONSTRAINT ValidBirth CHECK (Birth <= CURRENT_DATE AND Birth <= CURRENT_DATE - INTERVAL '18 years');
 
 CREATE TABLE LoyltyCard(
 	CardId SERIAL PRIMARY KEY,
@@ -47,17 +55,19 @@ CREATE TABLE LoyltyCard(
     TotalSpent FLOAT DEFAULT 0.0,
     Eligible BOOLEAN GENERATED ALWAYS AS (TotalOrders > 15 AND TotalSpent > 1000.0) STORED
 );
+ALTER TABLE LoyltyCard 
+	ADD CONSTRAINT UniqueGuest UNIQUE (GuestId),
+	ADD CONSTRAINT IsPositive CHECK (TotalOrders >= 0 AND TotalSpent >= 0.0);
 
 CREATE TABLE Personnel(
 	PersonnelId SERIAL PRIMARY KEY,
 	Name VARCHAR(30) NOT NULL,
-	Type VARCHAR(30) CHECK(Type IN ('cook', 'deliverer', 'waiter')),
-	Birth TIMESTAMP,
+	Type VARCHAR(30) CHECK(Type IN ('cook', 'deliverer', 'waiter')) NOT NULL,
+	Birth TIMESTAMP NOT NULL,
 	DriverLicence BOOLEAN,
 	RestaurantId INT,
 	FOREIGN KEY (RestaurantId) REFERENCES Restaurant(RestaurantId)
 );
-
 ALTER TABLE Personnel
 	ADD CONSTRAINT CheckKuhar CHECK (Type = 'cook' AND DATE_PART('year', NOW()) - DATE_PART('year', Birth) >= 18),
     ADD CONSTRAINT CheckDostavljac CHECK (Type = 'deliverer' AND DriverLicence = TRUE);
@@ -89,6 +99,11 @@ CREATE TABLE "Order"(
 	FOREIGN KEY (DeliveryId) REFERENCES Delivery(DeliveryId),
 	FOREIGN KEY (OnSiteId) REFERENCES OnSite(OnSiteId)
 );
+ALTER TABLE "Order" 
+	ADD CONSTRAINT CheckPrice CHECK (Price > 0),
+	ALTER COLUMN Price SET NOT NULL,
+	ALTER COLUMN OrderType SET NOT NULL,
+	ALTER COLUMN GuestId SET NOT NULL;
 
 CREATE TABLE OrderMeal (
     OrderMealId SERIAL PRIMARY KEY,
@@ -98,6 +113,8 @@ CREATE TABLE OrderMeal (
     FOREIGN KEY (MealId) REFERENCES Meal(MealId),
     Quantity INT NOT NULL CHECK (Quantity > 0)
 );
+ALTER TABLE OrderMeal 
+	ADD CONSTRAINT CheckQuantity CHECK (Quantity > 0);
 
 CREATE TABLE Review(
 	ReviewId SERIAL PRIMARY KEY,
@@ -107,3 +124,5 @@ CREATE TABLE Review(
 	OrderId INT,
 	FOREIGN KEY (OrderId) REFERENCES "Order"(OrderId)
 );
+ALTER TABLE Review 
+	ADD CONSTRAINT UniqueReview UNIQUE (OrderId);
