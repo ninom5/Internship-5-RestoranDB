@@ -104,6 +104,8 @@ ALTER TABLE Delivery
 ALTER TABLE Delivery
 	ADD COLUMN delivererid INT,
 	ADD CONSTRAINT froignKey FOREIGN KEY (delivererid) REFERENCES Deliverer(delivererid);
+ALTER TABLE delivery
+	ALTER COLUMN deliverytime TYPE VARCHAR(50);
 
 CREATE TABLE OnSite(
 	OnSiteId SERIAL PRIMARY KEY,
@@ -134,6 +136,8 @@ ALTER TABLE "Order"
 ALTER TABLE "Order" 
 	DROP COLUMN DeliveryId,
 	DROP COLUMN OnSiteId;
+ALTER TABLE "Order"
+	ADD COLUMN Date TIMESTAMP;
 
 CREATE TABLE OrderMeal (
     OrderMealId SERIAL PRIMARY KEY,

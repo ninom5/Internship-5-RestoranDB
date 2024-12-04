@@ -1,0 +1,501 @@
+deliveryid,deliveryadress,deliverytime,orderid,delivererid
+1,29058 Tennessee Lane,25mins,386,44
+2,62 Spohn Center,1hour,646,28
+3,0274 Oxford Pass,10mins,418,160
+4,3308 Lakewood Circle,1.30hours,121,186
+5,1 Pearson Alley,45mins,689,34
+6,8 Merry Place,1.30hours,355,113
+7,1160 Birchwood Lane,1hour,499,83
+8,89 Elmside Parkway,20mins,183,184
+9,28016 Dunning Terrace,30mins,111,71
+10,60 Pawling Avenue,1hour,287,72
+11,5 Canary Street,25mins,301,59
+12,54160 Burning Wood Avenue,2hours,90,85
+13,88 Onsgard Park,20mins,201,179
+14,32338 Novick Point,10mins,196,192
+15,821 Utah Terrace,1hour,264,122
+16,295 Starling Terrace,10mins,125,62
+17,56767 Michigan Junction,1.30hours,114,171
+18,51 Harper Parkway,30mins,577,186
+19,18419 Carey Terrace,25mins,82,73
+20,405 Knutson Place,1.30hours,206,9
+21,3 Laurel Crossing,2hours,597,158
+22,5 Westport Terrace,25mins,497,116
+23,583 Haas Terrace,30mins,116,113
+24,30 Jana Crossing,2hours,470,48
+25,497 Spenser Crossing,30mins,336,144
+26,6918 Quincy Crossing,10mins,379,106
+27,19036 Dryden Hill,10mins,423,138
+28,10427 Dryden Park,25mins,480,14
+29,156 Ridgeway Junction,1hour,44,129
+30,2 Rutledge Alley,45mins,132,96
+31,27802 Huxley Lane,45mins,659,160
+32,6 Bunting Street,20mins,53,23
+33,87 Cambridge Lane,30mins,657,159
+34,5631 Warbler Parkway,2hours,57,40
+35,07780 Trailsway Center,10mins,200,163
+36,97241 3rd Lane,2hours,553,26
+37,9 Sachtjen Pass,10mins,32,34
+38,5888 Moulton Trail,30mins,161,13
+39,2 Springs Alley,2hours,577,106
+40,025 Delaware Terrace,20mins,150,186
+41,97240 Pierstorff Terrace,45mins,354,93
+42,2 Magdeline Street,30mins,135,147
+43,0415 Menomonie Center,10mins,574,177
+44,713 Eggendart Circle,2hours,125,128
+45,69 Dottie Hill,1.30hours,492,29
+46,418 3rd Trail,10mins,669,70
+47,80 Cardinal Street,25mins,292,54
+48,3202 Glacier Hill Street,1hour,671,29
+49,350 Maywood Road,1.30hours,626,131
+50,3 Melody Pass,25mins,140,144
+51,275 Hintze Drive,10mins,228,194
+52,54 Rigney Plaza,1hour,548,128
+53,048 Myrtle Pass,45mins,48,35
+54,009 Sycamore Avenue,10mins,382,188
+55,1365 Anniversary Drive,25mins,339,76
+56,32023 Cherokee Terrace,45mins,699,116
+57,98 Mifflin Park,1.30hours,602,90
+58,9 Mockingbird Lane,25mins,555,81
+59,9 Ridgeway Place,10mins,542,195
+60,71 Homewood Street,30mins,508,71
+61,4217 Bay Plaza,1hour,178,37
+62,5827 Daystar Way,1.30hours,563,20
+63,4 Clyde Gallagher Parkway,25mins,56,140
+64,21 Mccormick Alley,1.30hours,197,16
+65,99245 Drewry Terrace,30mins,342,22
+66,87631 Luster Trail,2hours,581,115
+67,5581 Montana Circle,2hours,443,79
+68,59 Chinook Junction,20mins,425,170
+69,73 Buhler Crossing,10mins,316,93
+70,6 Warner Street,45mins,614,7
+71,57865 Hauk Way,1hour,472,79
+72,63638 Maryland Street,25mins,687,178
+73,4 South Court,1.30hours,496,118
+74,51 Starling Way,45mins,172,126
+75,76 Golf Court,20mins,602,31
+76,75796 Scofield Terrace,1.30hours,493,49
+77,850 Northridge Center,10mins,580,85
+78,864 Hermina Lane,20mins,479,133
+79,888 Charing Cross Court,30mins,399,67
+80,7364 Haas Road,2hours,83,80
+81,936 Bluejay Street,1.30hours,171,133
+82,0752 Fairview Pass,20mins,251,121
+83,96 Hudson Park,1hour,505,182
+84,25 Sunbrook Terrace,1.30hours,405,166
+85,972 Algoma Lane,10mins,260,175
+86,2 Hudson Terrace,2hours,445,23
+87,6587 Sycamore Park,1.30hours,366,79
+88,1123 Sherman Road,20mins,563,33
+89,64875 Dennis Center,20mins,630,146
+90,00 Wayridge Center,1.30hours,441,68
+91,5032 Hermina Place,45mins,44,3
+92,9 Lillian Parkway,20mins,124,93
+93,66266 Sundown Road,25mins,473,125
+94,74 Doe Crossing Place,25mins,455,43
+95,768 Cody Court,2hours,523,37
+96,460 Sunbrook Parkway,1.30hours,323,181
+97,3 Gina Parkway,2hours,125,19
+98,96 Surrey Terrace,1hour,398,66
+99,29 Boyd Road,2hours,338,67
+100,0 Becker Crossing,1.30hours,147,89
+101,5483 Dottie Trail,20mins,489,97
+102,640 Morning Pass,20mins,78,97
+103,7481 Dennis Point,1.30hours,22,180
+104,80 Superior Hill,1hour,647,68
+105,8200 Loomis Pass,1hour,669,162
+106,65 Hagan Alley,1hour,12,187
+107,4722 Heath Drive,2hours,52,60
+108,88276 Mesta Alley,45mins,592,99
+109,74210 Haas Crossing,25mins,240,43
+110,51968 Debs Crossing,20mins,152,33
+111,18 Hermina Park,30mins,417,93
+112,037 Iowa Center,30mins,325,80
+113,61814 Rowland Circle,20mins,310,69
+114,68 Crownhardt Terrace,1hour,666,173
+115,4 Jackson Junction,1.30hours,591,158
+116,81 Fair Oaks Pass,20mins,487,18
+117,1205 Northport Trail,25mins,672,132
+118,09 Kim Alley,30mins,85,134
+119,0 Chinook Way,1hour,27,3
+120,3 Bowman Park,25mins,603,69
+121,89 Troy Hill,30mins,121,108
+122,279 Stoughton Hill,25mins,523,163
+123,596 8th Parkway,30mins,502,136
+124,148 Corry Hill,20mins,583,128
+125,0713 Bay Junction,1.30hours,206,164
+126,72 American Ash Place,25mins,1,146
+127,775 Everett Way,25mins,28,138
+128,1 Barby Junction,45mins,550,88
+129,63677 Birchwood Center,20mins,435,76
+130,94834 Luster Place,1hour,343,193
+131,2 Mcbride Center,20mins,364,105
+132,23 Sheridan Parkway,25mins,234,104
+133,9463 Mitchell Park,10mins,52,178
+134,228 Ruskin Drive,30mins,605,143
+135,6754 Nobel Pass,45mins,158,130
+136,70846 Sherman Drive,45mins,569,125
+137,881 Warrior Way,30mins,48,190
+138,74820 Eastwood Parkway,10mins,683,137
+139,404 Hovde Place,45mins,611,32
+140,821 Carpenter Point,20mins,616,198
+141,61 Moulton Terrace,45mins,255,161
+142,1368 Boyd Trail,1.30hours,391,23
+143,08 Hoepker Circle,1.30hours,264,119
+144,36 Crowley Avenue,1.30hours,357,156
+145,3 Arapahoe Parkway,45mins,598,23
+146,9914 Laurel Lane,2hours,696,188
+147,2 Center Road,1.30hours,492,120
+148,19 Shasta Parkway,25mins,623,79
+149,498 Harbort Hill,30mins,427,33
+150,1345 Shopko Crossing,30mins,511,2
+151,04 Claremont Alley,30mins,541,30
+152,78 Debs Court,30mins,592,14
+153,79 Delladonna Avenue,20mins,67,197
+154,68750 Fieldstone Way,20mins,285,143
+155,77 Sommers Hill,25mins,330,45
+156,0 Pawling Parkway,25mins,624,111
+157,7 Maryland Drive,1hour,528,189
+158,72 Carioca Center,2hours,7,109
+159,56 Sauthoff Road,45mins,202,98
+160,3072 Sutherland Hill,1.30hours,45,189
+161,77603 Forest Run Trail,25mins,405,27
+162,31297 Hagan Parkway,1hour,578,35
+163,34 Eagle Crest Lane,1hour,452,175
+164,3 Canary Circle,30mins,182,69
+165,835 Sauthoff Hill,1hour,686,174
+166,70982 Shopko Lane,2hours,245,132
+167,3698 Petterle Crossing,1.30hours,339,90
+168,64 Anthes Place,20mins,677,188
+169,1 Farmco Place,10mins,83,84
+170,4 Sullivan Hill,45mins,52,94
+171,881 West Junction,10mins,415,74
+172,0072 Fisk Junction,10mins,336,100
+173,49648 Menomonie Crossing,30mins,497,32
+174,99602 Merchant Circle,10mins,467,121
+175,6 Nancy Place,20mins,548,2
+176,8792 Maple Junction,25mins,316,50
+177,60568 Springview Parkway,20mins,272,39
+178,655 Cascade Parkway,20mins,617,96
+179,3 Tennessee Alley,1hour,365,95
+180,841 Glendale Pass,20mins,678,193
+181,77652 Brickson Park Court,10mins,452,4
+182,7873 Colorado Terrace,30mins,679,85
+183,422 Lyons Drive,1hour,55,75
+184,2278 Drewry Park,30mins,675,3
+185,69712 Pennsylvania Avenue,25mins,176,183
+186,930 Gateway Point,1hour,198,151
+187,108 Lindbergh Circle,1hour,341,39
+188,611 Glacier Hill Way,20mins,175,55
+189,3025 Meadow Ridge Terrace,1hour,420,93
+190,6141 Northwestern Pass,1hour,469,133
+191,733 Prairie Rose Pass,10mins,374,180
+192,125 Pankratz Pass,1hour,301,181
+193,81967 Warbler Drive,1hour,558,17
+194,28895 Green Ridge Trail,25mins,73,196
+195,7126 Marquette Terrace,20mins,347,36
+196,0986 Forest Place,2hours,507,191
+197,94379 Dennis Place,30mins,167,46
+198,4441 Golf Center,1hour,689,96
+199,00219 Kinsman Pass,10mins,417,158
+200,18902 Vernon Place,25mins,25,137
+201,94401 Stephen Way,25mins,372,112
+202,94 Mesta Hill,20mins,399,26
+203,1692 Bobwhite Way,2hours,429,129
+204,22732 Ronald Regan Circle,1hour,451,159
+205,9488 International Terrace,30mins,541,48
+206,797 Merry Point,25mins,454,89
+207,5828 Harper Circle,1hour,346,47
+208,906 Washington Trail,30mins,555,113
+209,78616 Vernon Road,1.30hours,39,66
+210,285 Del Mar Plaza,1.30hours,446,164
+211,0499 Summit Lane,2hours,652,139
+212,59866 Duke Junction,10mins,674,156
+213,2 Magdeline Plaza,20mins,12,26
+214,98 Walton Lane,1hour,105,100
+215,67 Menomonie Terrace,25mins,556,18
+216,53 Schlimgen Circle,1hour,503,86
+217,1261 Hoffman Hill,2hours,241,174
+218,7669 Esker Alley,25mins,525,40
+219,68 Prairieview Road,2hours,338,104
+220,44620 Bartillon Place,1.30hours,640,44
+221,726 Holy Cross Drive,1hour,309,58
+222,7988 Farmco Center,20mins,626,98
+223,8 Londonderry Street,10mins,539,155
+224,766 Northland Court,1hour,243,23
+225,8808 Dixon Place,10mins,156,46
+226,6 Mandrake Point,30mins,13,136
+227,93345 Delladonna Terrace,30mins,503,106
+228,166 American Parkway,20mins,251,58
+229,85 Birchwood Plaza,45mins,310,151
+230,150 Burrows Drive,25mins,452,189
+231,03542 Everett Pass,2hours,661,96
+232,6 Pawling Court,30mins,643,68
+233,9 Red Cloud Hill,1hour,346,62
+234,3 Toban Circle,10mins,675,94
+235,739 Green Trail,20mins,610,158
+236,94704 Lyons Center,10mins,694,65
+237,38 Summerview Street,2hours,528,94
+238,1 Clyde Gallagher Street,30mins,471,117
+239,2 Forest Point,45mins,67,171
+240,7354 Texas Crossing,10mins,665,195
+241,733 Stuart Center,25mins,566,112
+242,4345 Northview Park,45mins,364,9
+243,615 Veith Way,25mins,581,58
+244,7 Golf Course Hill,20mins,220,70
+245,587 Melrose Junction,1hour,87,32
+246,304 Lyons Crossing,1hour,563,43
+247,7 Kedzie Pass,25mins,531,155
+248,803 Basil Park,1hour,164,41
+249,24546 Upham Plaza,20mins,370,60
+250,823 Pine View Junction,45mins,101,144
+251,4078 Shoshone Street,30mins,476,149
+252,215 Basil Hill,1.30hours,404,33
+253,4 Montana Crossing,1.30hours,49,26
+254,7564 Holy Cross Circle,1hour,699,17
+255,6139 Warner Road,30mins,39,102
+256,416 Mosinee Junction,1.30hours,429,193
+257,26098 Ryan Trail,30mins,86,98
+258,3116 Bunker Hill Drive,30mins,67,63
+259,97 Rockefeller Hill,2hours,188,70
+260,4 Oak Pass,2hours,22,28
+261,5 Crest Line Terrace,2hours,507,87
+262,07368 Debs Street,45mins,497,137
+263,8799 Brickson Park Drive,45mins,522,20
+264,07 New Castle Pass,1hour,660,110
+265,3 Charing Cross Place,45mins,457,48
+266,12 Crowley Avenue,1hour,148,99
+267,736 Shoshone Crossing,10mins,578,153
+268,8009 Rieder Junction,10mins,234,58
+269,20208 Green Junction,1hour,252,119
+270,5 School Trail,45mins,466,137
+271,811 Debs Alley,1.30hours,63,148
+272,1974 Buhler Parkway,10mins,388,173
+273,30 Bluestem Alley,1hour,420,117
+274,39273 Elgar Road,1.30hours,277,82
+275,4824 Declaration Court,2hours,402,46
+276,49 Washington Center,45mins,572,136
+277,1 Fair Oaks Trail,30mins,657,192
+278,365 Bellgrove Junction,2hours,32,22
+279,25 Hooker Drive,30mins,213,105
+280,3569 Sunnyside Pass,1.30hours,665,35
+281,6 Norway Maple Drive,25mins,533,179
+282,4569 Marcy Terrace,45mins,525,73
+283,4 Sunbrook Road,1hour,400,65
+284,810 Vera Place,2hours,355,148
+285,18 Glendale Drive,2hours,326,46
+286,297 Helena Drive,10mins,383,177
+287,04801 Raven Avenue,1hour,297,70
+288,4 Hagan Pass,1.30hours,181,12
+289,298 Portage Hill,2hours,11,50
+290,71564 Quincy Circle,30mins,376,142
+291,7 Loeprich Park,45mins,382,130
+292,4733 Stuart Plaza,1.30hours,364,134
+293,6153 Crest Line Plaza,30mins,645,194
+294,76303 Oxford Terrace,2hours,159,1
+295,431 Harper Avenue,25mins,367,187
+296,1 Duke Court,10mins,110,25
+297,976 Marquette Avenue,2hours,471,21
+298,16509 Kenwood Point,10mins,73,128
+299,066 Stephen Pass,1.30hours,441,26
+300,4 Anthes Junction,1hour,629,142
+301,8 Drewry Pass,30mins,397,126
+302,786 Burrows Terrace,20mins,321,189
+303,92 Rusk Drive,1.30hours,379,27
+304,77127 Tomscot Terrace,30mins,198,20
+305,977 Forest Crossing,30mins,388,198
+306,1261 Anthes Parkway,10mins,299,2
+307,16365 Vahlen Trail,45mins,36,90
+308,74 Paget Center,45mins,655,7
+309,12 Kingsford Way,1hour,94,58
+310,81 Miller Hill,1hour,398,130
+311,7841 Mcbride Road,2hours,257,129
+312,3412 Sutteridge Avenue,20mins,40,126
+313,058 Dayton Lane,30mins,52,45
+314,85522 Becker Alley,45mins,71,96
+315,65157 Bayside Way,1hour,336,48
+316,545 Hollow Ridge Way,20mins,424,49
+317,106 Maple Pass,1.30hours,41,103
+318,69 Lakewood Gardens Alley,2hours,674,117
+319,6172 Trailsway Crossing,25mins,140,126
+320,73 Helena Terrace,1hour,310,77
+321,76 Kedzie Terrace,1.30hours,498,184
+322,196 Crescent Oaks Junction,1hour,444,71
+323,9 Mariners Cove Crossing,45mins,676,89
+324,7830 Algoma Lane,1hour,490,32
+325,11963 Pawling Park,45mins,205,136
+326,772 Mayer Drive,10mins,286,48
+327,02 Eastlawn Pass,1hour,372,22
+328,42 Arkansas Hill,45mins,72,166
+329,00 Golf Point,45mins,568,167
+330,362 Westridge Avenue,10mins,55,145
+331,7 Clyde Gallagher Street,1hour,656,16
+332,902 Northfield Court,20mins,101,92
+333,19 Dixon Trail,1hour,502,114
+334,04305 Mosinee Plaza,45mins,275,22
+335,2381 Hagan Street,1hour,195,142
+336,35 Mesta Trail,1hour,173,198
+337,784 Nelson Parkway,45mins,469,56
+338,30283 New Castle Alley,1hour,443,63
+339,3 Everett Avenue,25mins,456,135
+340,78765 Erie Center,30mins,274,152
+341,3 Bayside Alley,2hours,206,47
+342,82 Ronald Regan Hill,2hours,685,44
+343,753 Reinke Avenue,2hours,98,8
+344,8 Hooker Circle,10mins,281,185
+345,7559 Stang Avenue,10mins,534,77
+346,803 Elmside Road,10mins,58,166
+347,147 Jenifer Circle,45mins,661,184
+348,7 Crowley Plaza,30mins,653,172
+349,36 Lakewood Gardens Junction,10mins,110,97
+350,750 High Crossing Hill,25mins,231,135
+351,6024 Thompson Crossing,45mins,263,114
+352,8 Shelley Point,10mins,416,142
+353,849 Hanover Drive,1hour,170,27
+354,618 Mandrake Place,30mins,187,40
+355,88 Arrowood Alley,45mins,315,191
+356,8058 Arizona Way,45mins,106,88
+357,661 Elmside Avenue,2hours,632,6
+358,09472 American Parkway,30mins,660,71
+359,0 Westridge Parkway,1hour,542,59
+360,0935 Carberry Lane,10mins,275,83
+361,18090 Charing Cross Point,30mins,487,189
+362,72 Cottonwood Parkway,45mins,74,80
+363,848 Magdeline Pass,25mins,437,158
+364,308 Kensington Road,25mins,365,46
+365,302 Forest Run Hill,25mins,373,193
+366,15820 Reinke Crossing,45mins,86,8
+367,043 Buena Vista Way,30mins,237,180
+368,7 Hovde Point,45mins,414,84
+369,2 Dapin Avenue,10mins,5,158
+370,878 Eastlawn Court,1hour,349,49
+371,85 Glendale Plaza,2hours,361,4
+372,5949 Pine View Court,20mins,482,29
+373,00 Miller Center,20mins,681,147
+374,82 Esker Crossing,10mins,282,3
+375,98 Raven Point,10mins,463,198
+376,09594 Hollow Ridge Point,1hour,695,177
+377,6735 Vahlen Road,1.30hours,144,35
+378,72 Cottonwood Avenue,1hour,200,95
+379,44 Farwell Road,30mins,402,165
+380,30619 Eliot Trail,30mins,685,152
+381,0173 Forster Street,1hour,507,125
+382,978 Erie Center,2hours,469,38
+383,70 Havey Drive,45mins,627,145
+384,611 Oneill Hill,30mins,490,79
+385,3 Transport Center,1.30hours,547,81
+386,066 Blaine Lane,30mins,587,182
+387,5 Ramsey Circle,20mins,698,151
+388,7724 Packers Park,1hour,416,195
+389,9882 Marcy Place,2hours,124,80
+390,45 Goodland Hill,1.30hours,500,197
+391,6037 Kenwood Drive,10mins,470,23
+392,9 Homewood Circle,1.30hours,622,135
+393,62 Bluestem Plaza,1hour,281,121
+394,83 Pearson Junction,10mins,642,1
+395,7907 Novick Hill,25mins,346,38
+396,4364 Ridgeview Park,20mins,302,46
+397,8 Norway Maple Street,1.30hours,428,154
+398,48235 Warrior Trail,30mins,700,124
+399,49737 Vera Lane,45mins,89,176
+400,89553 Grayhawk Court,45mins,279,117
+401,085 Saint Paul Avenue,1.30hours,219,77
+402,7077 Warrior Point,1hour,688,103
+403,8870 Roth Parkway,1.30hours,347,133
+404,592 Merry Way,30mins,182,196
+405,62 Butternut Junction,20mins,597,127
+406,017 Alpine Terrace,10mins,223,184
+407,20113 Lillian Pass,45mins,326,133
+408,12358 Mifflin Hill,20mins,648,107
+409,33 Longview Avenue,10mins,182,140
+410,00573 Michigan Point,1.30hours,199,75
+411,144 Paget Lane,20mins,129,15
+412,29 Mendota Center,10mins,523,111
+413,1749 Kinsman Point,25mins,93,29
+414,739 Scofield Road,1.30hours,671,169
+415,8681 Glacier Hill Court,1hour,337,196
+416,5208 Springs Junction,2hours,67,52
+417,3 Sommers Point,2hours,373,86
+418,9 Canary Alley,1.30hours,149,77
+419,523 Acker Road,45mins,679,107
+420,7231 Helena Alley,10mins,518,6
+421,4614 Kennedy Lane,2hours,544,45
+422,575 Roth Drive,2hours,683,178
+423,2069 Upham Plaza,10mins,582,115
+424,6 Anthes Terrace,2hours,73,3
+425,38889 Manufacturers Street,20mins,112,191
+426,3120 Browning Court,1hour,240,195
+427,5622 Crest Line Court,30mins,320,164
+428,06091 Manitowish Place,1hour,585,39
+429,542 North Lane,1hour,343,68
+430,8537 Dixon Court,10mins,496,37
+431,86 Comanche Street,20mins,292,35
+432,3 Green Parkway,2hours,323,34
+433,626 Northridge Way,45mins,584,79
+434,2 Chive Hill,1hour,686,68
+435,532 Duke Pass,1.30hours,626,170
+436,907 Grasskamp Point,20mins,541,117
+437,3 Truax Park,20mins,455,69
+438,8625 Cordelia Trail,20mins,510,65
+439,6723 High Crossing Junction,30mins,348,115
+440,71 Commercial Place,10mins,70,183
+441,960 Mitchell Circle,1.30hours,527,130
+442,8666 Gulseth Drive,20mins,327,24
+443,0605 Lakeland Junction,1hour,582,149
+444,61 Everett Park,2hours,42,89
+445,48901 Westport Hill,2hours,555,117
+446,989 Waywood Road,20mins,412,34
+447,2997 Pierstorff Drive,2hours,253,65
+448,2951 Sunnyside Center,1hour,694,163
+449,077 Armistice Alley,20mins,275,56
+450,8649 Stephen Pass,1hour,598,178
+451,0160 Spaight Way,1.30hours,557,62
+452,7 1st Road,1.30hours,341,54
+453,245 Ronald Regan Parkway,1hour,32,81
+454,611 Twin Pines Park,45mins,513,86
+455,141 Elka Parkway,25mins,619,78
+456,9736 Mcguire Place,1.30hours,443,160
+457,80838 Park Meadow Street,25mins,365,138
+458,55 Glacier Hill Street,20mins,75,10
+459,8 Manitowish Lane,30mins,101,156
+460,909 Pine View Avenue,2hours,446,123
+461,6384 Washington Terrace,25mins,422,104
+462,5370 Morningstar Avenue,25mins,259,142
+463,24123 Northfield Parkway,45mins,185,87
+464,3 Coolidge Trail,1hour,685,152
+465,5618 Brown Street,20mins,193,197
+466,5 Grim Court,1hour,111,1
+467,0 West Hill,1hour,83,71
+468,314 Walton Plaza,25mins,157,45
+469,55 Clyde Gallagher Pass,20mins,404,128
+470,06 Division Trail,25mins,195,190
+471,91175 Glendale Parkway,45mins,440,34
+472,4 Transport Avenue,10mins,584,152
+473,84 North Avenue,1.30hours,491,110
+474,9 2nd Parkway,1.30hours,527,164
+475,6614 Golf Course Pass,1hour,282,21
+476,0823 Norway Maple Trail,25mins,346,21
+477,954 Bunker Hill Junction,10mins,32,165
+478,5644 Elmside Plaza,2hours,542,2
+479,67 Golf View Pass,20mins,313,191
+480,281 Canary Drive,2hours,444,73
+481,715 Lillian Plaza,30mins,163,112
+482,3029 Knutson Terrace,20mins,3,15
+483,6974 Scott Way,1.30hours,592,128
+484,3940 Ramsey Lane,20mins,151,27
+485,3153 Bultman Parkway,1.30hours,74,113
+486,0590 Mccormick Trail,1.30hours,122,60
+487,5314 Algoma Lane,25mins,382,8
+488,61 Esch Alley,45mins,587,55
+489,96 Merchant Hill,30mins,651,83
+490,5 Melrose Court,20mins,278,173
+491,681 Straubel Place,10mins,156,123
+492,3910 Rieder Road,1hour,492,36
+493,1673 Hallows Drive,20mins,310,147
+494,44 Jay Junction,1hour,499,187
+495,56 Pleasure Lane,30mins,387,57
+496,193 Anthes Center,45mins,493,129
+497,9404 6th Way,1.30hours,634,192
+498,4727 Knutson Parkway,25mins,305,26
+499,0 Eastlawn Circle,25mins,79,5
+500,03363 Brown Crossing,1hour,529,56
