@@ -50,6 +50,8 @@ CREATE TABLE Guest(
 );
 ALTER TABLE Guest 
 	ADD CONSTRAINT ValidBirth CHECK (Birth <= CURRENT_DATE AND Birth <= CURRENT_DATE - INTERVAL '18 years');
+ALTER TABLE Guest
+	ADD COLUMN Surname VARCHAR(50);
 
 CREATE TABLE LoyltyCard(
 	CardId SERIAL PRIMARY KEY,
@@ -84,6 +86,8 @@ ADD CONSTRAINT CheckPersonnel CHECK (
     OR (Type = 'deliverer' AND DriverLicence = TRUE)
     OR (Type = 'waiter')
 );
+ALTER TABLE PERSONNEL
+	ADD COLUMN Surname VARCHAR(50);
 			
 CREATE TABLE Delivery(
 	DeliveryId SERIAL PRIMARY KEY,
@@ -92,12 +96,23 @@ CREATE TABLE Delivery(
 	DelivererId INT,
 	FOREIGN KEY (DelivererId) REFERENCES Personnel(PersonnelId)
 );
+ALTER TABLE Delivery
+	ADD COLUMN OrderId INT,
+	ADD CONSTRAINT newOrderKey FOREIGN KEY (OrderId) REFERENCES "Order"(OrderId);
+ALTER TABLE Delivery
+	DROP COLUMN delivererid;
+ALTER TABLE Delivery
+	ADD COLUMN delivererid INT,
+	ADD CONSTRAINT froignKey FOREIGN KEY (delivererid) REFERENCES Deliverer(delivererid);
 
 CREATE TABLE OnSite(
 	OnSiteId SERIAL PRIMARY KEY,
 	WaiterId INT,
 	FOREIGN KEY (WaiterId) REFERENCES Personnel(PersonnelId)
 );
+ALTER TABLE OnSite
+	ADD COLUMN OrderId INT,
+	ADD CONSTRAINT newOrderKey FOREIGN KEY (OrderId) REFERENCES "Order"(OrderId);
 
 CREATE TABLE "Order"(
 	OrderId SERIAL PRIMARY KEY,
@@ -116,6 +131,9 @@ ALTER TABLE "Order"
 	ALTER COLUMN Price SET NOT NULL,
 	ALTER COLUMN OrderType SET NOT NULL,
 	ALTER COLUMN GuestId SET NOT NULL;
+ALTER TABLE "Order" 
+	DROP COLUMN DeliveryId,
+	DROP COLUMN OnSiteId;
 
 CREATE TABLE OrderMeal (
     OrderMealId SERIAL PRIMARY KEY,
@@ -138,3 +156,9 @@ CREATE TABLE Review(
 );
 ALTER TABLE Review 
 	ADD CONSTRAINT UniqueReview UNIQUE (OrderId);
+
+CREATE TABLE Deliverer(
+	DelivererId SERIAL PRIMARY KEY,
+	PersonnelId INT,
+	FOREIGN KEY (PersonnelId) REFERENCES Personnel(PersonnelId)
+);

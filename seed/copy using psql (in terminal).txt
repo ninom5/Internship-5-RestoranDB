@@ -19,3 +19,11 @@ hema.csv' DELIMITER ',' CSV HEADER;
 /*Personnel*/
 \copy Personnel(PersonnelId, Name, Type, Birth, DriverLicence, RestaurantId) FROM 'C:/Users/Kor
 isnik/Downloads/personnelSchema.csv' DELIMITER ',' CSV HEADER;
+
+/*Order*/
+\copy "Order"(orderid, price, ordertype, note, guestid) FROM 'C:/Users/Korisnik/Downloads/orderSchema.
+csv' DELIMITER ',' CSV HEADER;
+
+/*Delivery*/
+\copy Delivery(deliveryid, deliveryadress, deliverytime, orderid, delivererid) FROM 'C:/Users/Korisnik
+/Downloads/deliverySchema.csv' DELIMITER ',' CSV HEADER;
