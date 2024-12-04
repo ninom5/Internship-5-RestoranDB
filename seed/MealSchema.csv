@@ -23,7 +23,7 @@ MealId,name,category,calories,price
 22,Caramel Pork Parfait,predjelo,332.7,43
 23,BBQ Fish Paella,desert,140.3,19
 24,Chocolate Lamb Fajitas,predjelo,589.6,26
-25,Grilled Lamb Soup,desert,433.0,71
+25,Choocolade Lamb,desert,433.0,71
 26,Chocolate Bacon Risotto,glavno jelo,900.0,53
 27,Classic Tofu Salad,predjelo,723.8,48
 28,Vegetarian Sundae Parfait,desert,329.3,19
@@ -58,7 +58,7 @@ MealId,name,category,calories,price
 57,Caramel Beef Pasta,glavno jelo,333.9,12
 58,Smoky Fish Pizza,desert,116.0,43
 59,Grilled Pork Curry,predjelo,376.7,59
-60,BBQ Pork Scoop,glavno jelo,553.3,36
+60,BBQ Chicken Scoop,glavno jelo,553.3,36
 61,Spicy Bacon Tacos,predjelo,160.3,36
 62,Vegetarian Tofu Soup,glavno jelo,524.0,47
 63,Chocolate Cake Alfredo,glavno jelo,396.6,17
@@ -160,7 +160,7 @@ MealId,name,category,calories,price
 159,Spicy Beef Risotto,predjelo,293.3,16
 160,Vegetarian Bacon Parfait,desert,825.0,29
 161,BBQ Tofu Scoop,desert,526.9,75
-162,Creamy Duck Scoop,desert,414.5,51
+162,Creamy Duck,desert,414.5,51
 163,Tangy Sundae Paella,glavno jelo,326.1,71
 164,BBQ Duck Mousse,predjelo,228.1,57
 165,Tangy Lamb Burger,predjelo,279.2,76
@@ -184,13 +184,13 @@ MealId,name,category,calories,price
 183,Vanilla Lamb Tacos,desert,590.8,58
 184,Spicy Tofu Soup,glavno jelo,896.3,53
 185,Spicy Salmon Wrap,predjelo,874.5,86
-186,Creamy Bacon Pasta,desert,810.1,68
+186,Bacon Pasta,desert,810.1,68
 187,Spicy Bacon Stew,predjelo,128.8,9
 188,Zesty Sundae Salad,predjelo,767.9,17
 189,Smoky Pork Mousse,glavno jelo,648.1,51
 190,Hearty Turkey Fajitas,glavno jelo,865.1,31
 191,Vegetarian Sundae Pasta,desert,102.8,94
-192,Spicy Tofu Soup,predjelo,999.1,53
+192,Spicy Soup,predjelo,999.1,53
 193,Vegetarian Lamb Scoop,desert,295.8,46
 194,Tangy Beef Parfait,glavno jelo,689.5,45
 195,Zesty Shrimp Curry,glavno jelo,845.2,91
@@ -405,7 +405,7 @@ MealId,name,category,calories,price
 404,Vanilla Beef Burger,glavno jelo,838.4,76
 405,BBQ Lamb Curry,glavno jelo,510.7,27
 406,Vegetarian Ice Cream Parfait,desert,476.9,48
-407,Grilled Lamb Soup,desert,170.2,58
+407,Grilled Lamb,desert,170.2,58
 408,Spicy Duck Soup,desert,651.7,13
 409,Vanilla Custard Pizza,glavno jelo,497.7,47
 410,Zesty Ice Cream Pasta,desert,981.9,54

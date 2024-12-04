@@ -1,5 +1,21 @@
 /*Grad*/
-\copy Restaurant(RestaurantId, Name, CityId, NumberOfTables, OpeningTime, ClosingTime) FROM 'C:/Users/KORISNIK/Downloads/CitySchema.csv' DELIMITER ',' CSV HEADER;
+ \copy City(CityId, Name) FROM 'C:/Users/KORISNIK/Downloads/CityTable.csv' DELIMITER ',' CSV HEADER;
 
 /*Restoran*/
-\copy Restaurant(RestaurantId, Name, CityId, NumberOfTables, OpeningTime, ClosingTime) FROM 'C:/Users/KORISNIK/Downloads/RestaurantSchema.csv' DELIMITER ',' CSV HEADER;
+\copy Restaurant(RestaurantId, Name, CityId, NumberOfTables, OpeningTime, ClosingTime) FROM 'C:/Users/KORISNIK/Downloads/RestaurantTable.csv' DELIMITER ',' CSV HEADER;
+
+/*Gost*/
+\copy Guest(GuestId, Name, Birth) FROM 'C:/Users/Korisnik/Downloads/guestSchema.csv' DELIMITER
+',' CSV HEADER;
+
+/*Meal*/
+\copy Meal(MealId, Name, Category, Calories, Price) FROM 'C:/Users/Korisnik/Downloads/MealSchema.csv' DELIMITER
+',' CSV HEADER;
+
+/*Menu*/
+\copy Menu(MenuId, RestaurantId, MealId, Availability) FROM 'C:/Users/Korisnik/Downloads/menuSc
+hema.csv' DELIMITER ',' CSV HEADER;
+
+/*Personnel*/
+\copy Personnel(PersonnelId, Name, Type, Birth, DriverLicence, RestaurantId) FROM 'C:/Users/Kor
+isnik/Downloads/personnelSchema.csv' DELIMITER ',' CSV HEADER;

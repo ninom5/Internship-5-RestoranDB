@@ -1,0 +1,1 @@
+INSERT INTO City(cityid, name) VALUES(501, 'Split');

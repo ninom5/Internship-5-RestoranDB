@@ -26,6 +26,8 @@ CREATE TABLE Meal(
 ALTER TABLE Meal
 	DROP COLUMN Description,
 	ADD CONSTRAINT UniqueMealName UNIQUE (Name);
+ALTER TABLE Meal
+	DROP CONSTRAINT UniqueMealName;
 
 CREATE TABLE Menu(
 	MenuId SERIAL PRIMARY KEY,
@@ -37,6 +39,8 @@ CREATE TABLE Menu(
 );
 ALTER TABLE Menu 
 	ADD CONSTRAINT UniqueRestaurantMeal UNIQUE (RestaurantId, MealId);
+ALTER TABLE MENU 
+	DROP CONSTRAINT UniqueRestaurantMeal;
 
 
 CREATE TABLE Guest(
@@ -71,7 +75,15 @@ CREATE TABLE Personnel(
 ALTER TABLE Personnel
 	ADD CONSTRAINT CheckKuhar CHECK (Type = 'cook' AND DATE_PART('year', NOW()) - DATE_PART('year', Birth) >= 18),
     ADD CONSTRAINT CheckDostavljac CHECK (Type = 'deliverer' AND DriverLicence = TRUE);
-
+ALTER TABLE Personnel
+	DROP CONSTRAINT CheckKuhar,
+	DROP CONSTRAINT CheckDostavljac;
+ALTER TABLE Personnel
+ADD CONSTRAINT CheckPersonnel CHECK (
+    (Type = 'cook' AND DATE_PART('year', NOW()) - DATE_PART('year', Birth) >= 18) 
+    OR (Type = 'deliverer' AND DriverLicence = TRUE)
+    OR (Type = 'waiter')
+);
 			
 CREATE TABLE Delivery(
 	DeliveryId SERIAL PRIMARY KEY,
