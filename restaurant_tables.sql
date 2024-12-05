@@ -107,14 +107,14 @@ ALTER TABLE Delivery
 ALTER TABLE delivery
 	ALTER COLUMN deliverytime TYPE VARCHAR(50);
 
-CREATE TABLE OnSite(
+CREATE TABLE OnSite
+(
 	OnSiteId SERIAL PRIMARY KEY,
+	OrderId INT,
 	WaiterId INT,
-	FOREIGN KEY (WaiterId) REFERENCES Personnel(PersonnelId)
-);
-ALTER TABLE OnSite
-	ADD COLUMN OrderId INT,
-	ADD CONSTRAINT newOrderKey FOREIGN KEY (OrderId) REFERENCES "Order"(OrderId);
+	FOREIGN KEY(OrderId) REFERENCES "Order"(OrderId),
+	FOREIGN KEY(WaiterId) REFERENCES Waiter(WaiterId)
+)
 
 CREATE TABLE "Order"(
 	OrderId SERIAL PRIMARY KEY,
@@ -158,11 +158,15 @@ CREATE TABLE Review(
 	OrderId INT,
 	FOREIGN KEY (OrderId) REFERENCES "Order"(OrderId)
 );
-ALTER TABLE Review 
-	ADD CONSTRAINT UniqueReview UNIQUE (OrderId);
 
 CREATE TABLE Deliverer(
 	DelivererId SERIAL PRIMARY KEY,
 	PersonnelId INT,
 	FOREIGN KEY (PersonnelId) REFERENCES Personnel(PersonnelId)
+);
+
+CREATE TABLE Waiter(
+WaiterId SERIAL PRIMARY KEY,
+PersonnelId INT,
+FOREIGN KEY (PersonnelId) REFERENCES Personnel(PersonnelId)
 );
