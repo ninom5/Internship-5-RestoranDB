@@ -49,6 +49,10 @@ CREATE TABLE "Order"(
     Date TIMESTAMP,
     FOREIGN KEY (GuestId) REFERENCES Guest(GuestId)
 );
+ALTER TABLE "Order"
+    ADD COLUMN RestaurantId INT;
+ALTER TABLE "Order"
+    ADD CONSTRAINT restaurantid_fk FOREIGN KEY (RestaurantId) REFERENCES Restaurant(RestaurantId);
 
 CREATE TABLE LoyaltyCard(
     CardId SERIAL PRIMARY KEY,
