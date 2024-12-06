@@ -30,7 +30,7 @@ CREATE TABLE MenuItems(
     FOREIGN KEY (RestaurantId) REFERENCES Restaurant(RestaurantId),
     FOREIGN KEY (MealId) REFERENCES Meal(MealId)
 );
-ALTER TABLE Menu
+ALTER TABLE MenuItems
     ADD CONSTRAINT UniqueRestaurantMeal UNIQUE (RestaurantId, MealId);
 
 CREATE TABLE Guest(
