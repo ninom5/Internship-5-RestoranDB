@@ -66,37 +66,24 @@ ORDER BY
 
 6.)
 SELECT 
-    m.Name AS DessertName,
-	m.category AS Category,
-	c.name AS City,
-	EXTRACT(MONTH FROM o.Date) AS Month,
-	EXTRACT(YEAR FROM o.Date) AS Year,
-    SUM(om.Quantity) AS TotalOrders
+    m.Name AS Dessert_Name, 
+    SUM(om.Quantity) AS Total_Quantity_Ordered
 FROM 
-    "Order" o
-JOIN 
-    OrderMeal om ON o.OrderId = om.OrderId
+    OrderMeal om
 JOIN 
     Meal m ON om.MealId = m.MealId
 JOIN 
-    Restaurant r ON o.RestaurantId = r.RestaurantId
-JOIN 
-    City c ON r.CityId = c.CityId
+    "Order" o ON om.OrderId = o.OrderId
 WHERE 
     m.Category = 'desert' 
-    AND c.Name = 'Split'
     AND EXTRACT(MONTH FROM o.Date) = 12
     AND EXTRACT(YEAR FROM o.Date) = 2023
 GROUP BY 
-    m.Name,
-	m.Category,
-	c.name,
-	EXTRACT(MONTH FROM o.Date),
-	EXTRACT(YEAR FROM o.Date)
+    m.Name
 HAVING 
     SUM(om.Quantity) > 10
 ORDER BY 
-    TotalOrders DESC;
+    Total_Quantity_Ordered DESC;
 
 
 7.)
