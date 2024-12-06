@@ -1,0 +1,206 @@
+1.)
+SELECT * FROM meal
+	WHERE meal.price < 15;
+
+2.)
+SELECT * FROM "Order" o 
+	WHERE o.price > 50 AND EXTRACT(year FROM o.Date) = 2023;
+
+3.)
+SELECT 
+    p.PersonnelId AS DelivererId,
+    p.Name,
+    p.Surname,
+    COUNT(d.DeliveryId) AS TotalDeliveries
+FROM 
+    Deliverer dl
+JOIN 
+    Personnel p ON dl.PersonnelId = p.PersonnelId
+JOIN 
+    Delivery d ON dl.PersonnelId = d.DelivererId
+GROUP BY 
+    p.PersonnelId, p.Name, p.Surname
+HAVING 
+    COUNT(d.DeliveryId) > 100;
+
+4.)
+SELECT 
+    p.PersonnelId,
+    p.Name,
+    p.Surname,
+    r.RestaurantId,
+	r.Name AS Restaurant_Name,
+    c.CityId,
+	c.Name,
+    p.Type
+FROM 
+    Personnel p
+JOIN 
+    Restaurant r ON p.RestaurantId = r.RestaurantId
+JOIN 
+    City c ON r.CityId = c.CityId
+WHERE
+    c.Name = 'Zagreb' AND p.Type = 'cook';
+
+
+5.)
+SELECT 
+    r.RestaurantId,
+    r.Name AS restaurant_name,
+    c.Name AS City,
+    EXTRACT(YEAR FROM o.Date) AS Year,
+    COUNT(o.OrderId) AS TotalOrders
+FROM 
+    "Order" o
+JOIN 
+    Restaurant r ON o.RestaurantId = r.RestaurantId
+JOIN 
+    City c ON r.CityId = c.CityId
+WHERE
+    c.Name = 'Split'
+    AND EXTRACT(YEAR FROM o.Date) = 2023
+GROUP BY 
+    r.RestaurantId, r.Name, c.Name, EXTRACT(YEAR FROM o.Date)
+ORDER BY 
+    TotalOrders DESC;
+
+6.)
+SELECT 
+    m.Name AS DessertName,
+	m.category AS Category,
+	c.name AS City,
+	EXTRACT(MONTH FROM o.Date) AS Month,
+	EXTRACT(YEAR FROM o.Date) AS Year,
+    SUM(om.Quantity) AS TotalOrders
+FROM 
+    "Order" o
+JOIN 
+    OrderMeal om ON o.OrderId = om.OrderId
+JOIN 
+    Meal m ON om.MealId = m.MealId
+JOIN 
+    Restaurant r ON o.RestaurantId = r.RestaurantId
+JOIN 
+    City c ON r.CityId = c.CityId
+WHERE 
+    m.Category = 'desert' 
+    AND c.Name = 'Split'
+    AND EXTRACT(MONTH FROM o.Date) = 12
+    AND EXTRACT(YEAR FROM o.Date) = 2023
+GROUP BY 
+    m.Name,
+	m.Category,
+	c.name,
+	EXTRACT(MONTH FROM o.Date),
+	EXTRACT(YEAR FROM o.Date)
+HAVING 
+    SUM(om.Quantity) > 10
+ORDER BY 
+    TotalOrders DESC;
+
+
+7.)
+SELECT 
+    g.Surname,
+    COUNT(o.OrderId) AS Total_Orders
+FROM 
+    "Order" o
+JOIN 
+    Guest g ON o.GuestId = g.GuestId
+WHERE 
+    g.Surname LIKE 'M%'
+GROUP BY 
+    g.Surname
+ORDER BY 
+	g.Surname ASC;
+
+
+8.)
+SELECT 
+    r.RestaurantId,
+    r.Name AS restaurant_name,
+	c.name AS City,
+    AVG(
+        CASE 
+            WHEN rev.GradeDelivery IS NOT NULL AND rev.GradeMeal IS NOT NULL 
+            	THEN (rev.GradeDelivery + rev.GradeMeal) / 2.0
+            WHEN rev.GradeMeal IS NOT NULL AND rev.GradeDelivery IS NULL
+				THEN rev.GradeMeal
+            ELSE NULL
+        END
+    ) AS average_rating
+FROM 
+    Restaurant r
+JOIN 
+    Review rev ON r.RestaurantId = rev.RestaurantId
+JOIN 
+    City c ON r.CityId = c.CityId
+WHERE 
+    c.Name = 'Rijeka'
+GROUP BY 
+    r.RestaurantId, 
+	r.Name,
+	c.Name
+ORDER BY 
+    average_rating DESC;
+
+9.)
+SELECT
+	r.RestaurantId,
+	r.name AS Restaurant_Name,
+	c.Name AS City,
+	r.numberoftables AS Number_Of_Tables,
+	r.hasdelivery AS Dostava
+FROM 
+	Restaurant r
+JOIN 
+	City c ON r.cityId = c.cityId
+WHERE
+	r.hasdelivery = true AND r.numberoftables > 30
+GROUP BY 
+	r.restaurantid,
+	r.name,
+	c.name,
+	r.numberoftables,
+	r.hasdelivery
+ORDER BY
+	r.numberoftables DESC
+
+
+10.)
+DELETE FROM MenuItems
+WHERE MealId NOT IN (
+    SELECT DISTINCT om.MealId
+    FROM "Order" o
+    JOIN OrderMeal om ON o.OrderId = om.OrderId
+    WHERE o.Date >= CURRENT_DATE - INTERVAL '2 years'
+);
+
+
+11.)
+UPDATE LoyaltyCard
+SET eligible = FALSE
+WHERE GuestId IN (
+    SELECT g.GuestId
+    FROM Guest g
+    LEFT JOIN "Order" o ON g.GuestId = o.GuestId
+    LEFT JOIN OrderMeal om ON o.OrderId = om.OrderId
+    WHERE (o.Date IS NULL OR o.Date < CURRENT_DATE - INTERVAL '1 year')
+    GROUP BY g.GuestId
+);
+
+DELETE FROM LoyaltyCard
+WHERE GuestId IN (
+    SELECT g.GuestId
+    FROM Guest g
+    LEFT JOIN "Order" o ON g.GuestId = o.GuestId
+    LEFT JOIN OrderMeal om ON o.OrderId = om.OrderId
+    LEFT JOIN Meal m ON om.MealId = m.MealId
+    WHERE o.OrderId IS NULL
+    OR (
+        o.Price = 0
+        AND m.Price = 0
+    )
+);
+
+
